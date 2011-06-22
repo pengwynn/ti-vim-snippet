@@ -1,0 +1,143 @@
+# UI Snippets
+snippet uiad
+	${1:alertDialog} = Ti.UI.createAlertDialog
+		id: '${2:$1}'
+		title: '$3'
+		message: '$4'
+		buttonNames: ['$5', '$6']
+snippet uil
+	${1:labelName} = Ti.UI.createLabel
+		id: '${2:$1}'
+		text: "${3}"
+snippet uib
+	${1:buttonName} = Ti.UI.createButton
+		id: '${2:$1}'
+		title: "${3}"
+snippet uibb
+	${1:buttonBarName} = Ti.UI.createButtonBar
+		id: '${2:$1}'
+		labels: ['$3', '$4', '$5']
+snippet uicfv
+	${1:coverFlowViewName} = Ti.UI.createCoverFlowView
+		id: '${2:$1}'
+		images: ['$3.png', '$4.png', '$5.png']
+snippet uidbi
+	${1:dashboardItemName} = Ti.UI.createDashboardItem
+		id: '${2:$1}'
+snippet uidbv
+	${1:dashboardViewName} = Ti.UI.createDashboardView
+		id: '${2:$1}'
+snippet uied
+	${1:emailDialogName} = Ti.UI.createEmailDialog
+		id: '${2:$1}'
+	$1.subject = "$3"
+	$1.subject = "$4"
+	$1.subject = "$5"
+snippet uiiv
+	${1:imageViewName} = Ti.UI.createImageView
+		id: '${2:$1}'
+		url: '$3'
+snippet uiod
+	${1:optionDialogName} = Ti.UI.createOptionDialog
+		id: '${2:$1}'
+		title: '$3'
+		options: ['$4', '$5']
+		cancel: 1
+	$1.show()
+snippet uip
+	${1:pickerName} = Ti.UI.createPicker
+		id: '${2:$1}'
+snippet uipc
+	${1:pickerColumnName} = Ti.UI.createPickerColumn
+		id: '${2:$1}'
+snippet uipr
+	${1:pickerRowName} = Ti.UI.createPickerRow
+		id: '${2:$1}'
+snippet uipb
+	${1:progressBarName} = Ti.UI.createProgressBar
+		id: '${2:$1}'
+		min: $3
+		max: $4
+		value: $5
+		message: $6
+snippet uisv
+	${1:scrollViewName} = Ti.UI.createScrollView
+		id: '${2:$1}'
+		contentWidth: '$3'
+		contentHeight: '$4'
+		top: 0
+		showVerticalScrollIndicator: true
+		showHorizontalIndicator: true
+snippet uiscv
+	${1:scrollableViewName} = Ti.UI.createScrollableView
+		id: '${2:$1}'
+		views: [$3, $4]
+		showPagingControl: true
+snippet uisb
+	${1:searchBarName} = Ti.UI.createSearchBar
+		id: '${2:$1}'
+		showCancel: ${3:true}
+snippet uisw
+	${1:switchName} = Ti.UI.createSwitch
+		id: '${2:$1}'
+		value: ${3:true}
+snippet uitab
+	${1:tabName} = Ti.UI.createTab
+		id: '${2:$1}'
+		window: ${3:window}
+		title: '$4'
+snippet uitabg
+	${1:tabGroupName} = Ti.UI.createTabGroup
+		id: '${2:$1}'
+	$1.show()
+snippet uitabb
+	${1:tabbedBarName} = Ti.UI.createTabbedBar
+		id: '${2:$1}'
+		labels: ['$3', '$4']
+snippet uit
+	${1:tableViewName} = Ti.UI.createTableView
+		id: '${2:$1}'
+	$1.headerTitle = "$3"
+snippet uitr
+	${1:tableViewRowName} = Ti.UI.createTableViewRow
+		id: '${2:$1}'
+snippet uitvs
+	${1:tableViewSectionName} = Ti.UI.createTableViewSection
+		id: '${2:$1}'
+snippet uita
+	${1:textAreaName} = Ti.UI.createTextArea
+		id: '${2:$1}'
+		value: "$3"
+snippet uitf
+	${1:textFieldName} = Ti.UI.createTextField
+		id: '${2:$1}'
+		value: "$3"
+snippet uiv
+	${1:viewName} = Ti.UI.createView
+		id: '${2:$1}'
+snippet uiw
+	${1:windowName} = Ti.UI.createWindow
+		id: '${2:$1}'
+snippet uiwv
+	${1:webViewName} = Ti.UI.createWebView
+		id: '${2:$1}'
+		url: '$3:http://www.google.com'
+# Network Snippet
+snippet uinet
+	${1:httpClientName} = Ti.Network.createHTTPClient()
+	$1.onload = () ->
+	$1.open('$2', '$3')
+	$1.send()
+# API
+snippet tiai
+	Ti.API.info('${1}')
+snippet tiad
+	Ti.API.debug('${1}')
+snippet tiae
+	Ti.API.error('${1}')
+# Properties
+snippet tiap
+	Ti.App.Properties.${1}String('$2')
+# EventListeners
+snippet tievent
+	${1}.addEventListener '${2}', (${3:e}) ->
